@@ -49,9 +49,9 @@ function favpress_demo_plugin_register_required_plugins() {
  */
 require __DIR__ . '/libs/plugin-update-checker-3.1/plugin-update-checker.php';
 $favpress_updater = PucFactory::buildUpdateChecker(
-    '__UPDATER_BASE_PATH__/updater.json',
+    'https://raw.githubusercontent.com/moewe-io/favpress-demo-plugin/stable/updater.json',
     __FILE__,
-    '__PRODUCT_SLUG__',
+    'favpress-demo-plugin',
     24
 );
 $favpress_updater->throttleRedundantChecks = true;

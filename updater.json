@@ -1,8 +1,8 @@
 {
   "name": "FavPress Demo Plugin",
   "version": "1.0.0",
-  "author": "__AUTHOR_NAME__",
-  "download_url": "http://www.favpress.com",
+  "author": "MOEWE GbR - Adrian M&ouml;rchen, Markus Weigelt",
+  "download_url": "https://github.com/moewe-io/favpress-demo-plugin/archive/stable.zip",
   "sections": {
     "description": "This plugins shows what you can do with FavPress"
   }
