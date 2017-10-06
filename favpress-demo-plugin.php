@@ -9,13 +9,16 @@
 	License: GPLv3
 */
 
+@include "load-demo.php";
+
+define('FAVPRESS_DEMO_BASE_PATH', dirname(__FILE__));
+
 /**
  * Require FavPress as dependency
  *
  * @see http://favpress.com/docs/10_getting-started.html
  */
-
-require_once __DIR__ . '/libs/class-tgm-plugin-activation.php';
+require_once FAVPRESS_DEMO_BASE_PATH . '/libs/class-tgm-plugin-activation.php';
 
 add_action('tgmpa_register', 'favpress_demo_plugin_register_required_plugins');
 
@@ -24,7 +27,7 @@ function favpress_demo_plugin_register_required_plugins() {
         array(
             'name'     => 'FavPress',
             'slug'     => 'favpress',
-            'source'   => 'https://apps.moewe.io/favpress/stable/favpress.zip',
+            'source'   => 'https://apps.moewe.io/favpress/master/favpress.zip',
             'required' => true
         ),
     );
@@ -45,10 +48,10 @@ function favpress_demo_plugin_register_required_plugins() {
 }
 
 /**
- * Check for plugin updates
+ * Check for plugin updates (nothing to do with demo)
  */
-require __DIR__ . '/libs/plugin-update-checker-3.1/plugin-update-checker.php';
-$favpress_updater = PucFactory::buildUpdateChecker(
+require FAVPRESS_DEMO_BASE_PATH . '/libs/plugin-update-checker-4.2/plugin-update-checker.php';
+$favpress_updater = Puc_v4_Factory::buildUpdateChecker(
     'https://raw.githubusercontent.com/moewe-io/favpress-demo-plugin/stable/updater.json',
     __FILE__,
     'favpress-demo-plugin',
