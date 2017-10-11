@@ -3,7 +3,7 @@
 	Plugin Name: FavPress Demo Plugin
 	Plugin URI: http://www.favpress.com
 	Description: This plugins shows what you can do with FavPress
-	Version: 1.0.0
+	Version: 1.1.0
 	Author: MOEWE GbR - Adrian M&ouml;rchen, Markus Weigelt
 	Author URI: http://www.moewe.io
 	License: GPLv3
